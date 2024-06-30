@@ -17,6 +17,7 @@ services:
     command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
+      - /home/neilg/Documents/Bootcamp/exam-1-gutendex/project_v2/gutendex/catalog_files/rdf:/app/catalog_files
     ports:
       - "8000:8000"
     depends_on:

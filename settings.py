@@ -50,6 +50,8 @@ INSTALLED_APPS = [
 
     # Project apps
     'books',
+    'gutendex',
+
 ]
 
 MIDDLEWARE = [
@@ -88,11 +90,11 @@ WSGI_APPLICATION = 'gutendex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DATABASE_NAME', default='gutendex'),
-        'USER': env('DATABASE_USER', default='gutendex'),
-        'PASSWORD': env('DATABASE_PASSWORD', default='gutendex'),
-        'HOST': env('DATABASE_HOST', default='db'),  # This should match the service name in docker-compose
-        'PORT': env('DATABASE_PORT', default='5432'),
+        'NAME': 'gutendex',
+        'USER': 'gutendex',
+        'PASSWORD': 'gutendex',
+        'HOST': 'db',  # This matches the service name in docker-compose
+        'PORT': '5432',
     }
 }
 
